@@ -7,6 +7,18 @@
     android:background="#381904"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:text="Just Java"
+        android:textSize="40dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

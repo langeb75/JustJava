@@ -39,6 +39,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * This method is called when the + button is clicked.
+     */
+    public void increment(View view) {
+        int quantity = 3;
+        displayQuantity(quantity);
+    }
+
+    /**
+     * This method is called when the - button is clicked.
+     */
+    public void decrement(View view) {
+        int quantity = 1;
+        displayQuantity(quantity);
+    }
+
+    /**
      * This method displays the given quantity value on the screen.
      */
     private void displayQuantity(int number) {

@@ -14,7 +14,9 @@ package com.example.justjava;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;  //MR. LANGE - Upon research via StackOverflow @ https://stackoverflow.com/questions/23330816/error-package-android-support-v7-app-does-not-exist
+
 import java.text.NumberFormat;
 
 
@@ -32,15 +34,6 @@ public class MainActivity extends AppCompatActivity {
     // Set a Global Variable for Quantity
     int quantity = 0;
 
-
-    /**
-     * This method is called when the order button is clicked.
-     */
-    public void submitOrder(View view) {
-        displayQuantity(quantity);
-        displayPrice(quantity * 5);
-    }
-
     /**
      * This method is called when the + button is clicked.
      */
@@ -55,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
         quantity = quantity - 1;
         displayQuantity(quantity);
+    }
+
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public void submitOrder(View view) {
+        displayPrice(quantity * 5);
     }
 
     /**

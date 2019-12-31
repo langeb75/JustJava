@@ -7,17 +7,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:text="Just Java"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/coffee_beans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Just Java"
+            android:textColor="#ffffff"
+            android:textSize="70dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,9 +36,9 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="5dp"
         android:text="Quantity"
-        android:textSize="20sp"
         android:textAllCaps="true"
         android:textColor="#ffffff"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -41,8 +52,8 @@
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
             android:onClick="decrement"
-            android:textSize="20sp"
-            android:text="-" />
+            android:text="-"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -58,9 +69,9 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
             android:onClick="increment"
-            android:text="+" />
+            android:text="+"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -71,9 +82,9 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="5dp"
         android:text="Price"
-        android:textSize="20sp"
         android:textAllCaps="true"
         android:textColor="#ffffff"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -81,9 +92,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="20sp"
         android:text="$0"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/order_button"
@@ -93,7 +104,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
         android:onClick="submitOrder"
-        android:textSize="20sp"
-        android:text="Order" />
+        android:text="Order"
+        android:textSize="20sp" />
 
 </LinearLayout>

@@ -29,11 +29,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // Set a Global Variable for Quantity
+    int quantity = 0;
+
+
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 2;
         displayQuantity(quantity);
         displayPrice(quantity * 5);
     }
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void increment(View view) {
-        int quantity = 3;
+        quantity = quantity + 1;
         displayQuantity(quantity);
     }
 
@@ -50,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the - button is clicked.
      */
     public void decrement(View view) {
-        int quantity = 1;
+        quantity = quantity - 1;
         displayQuantity(quantity);
     }
 

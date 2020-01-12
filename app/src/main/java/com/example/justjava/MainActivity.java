@@ -15,9 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;  //MR. LANGE - Upon research via StackOverflow @ https://stackoverflow.com/questions/23330816/error-package-android-support-v7-app-does-not-exist
-
-import java.text.NumberFormat;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 /**
@@ -54,7 +52,11 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(quantity * 5);
+        int price = quantity * 5;
+        String priceMessage = "Total for " + quantity + " coffee(s): $" + price;
+        priceMessage = priceMessage + "\nThank You";
+        displayMessage(priceMessage);
+        //displayPrice(quantity * 5);
     }
 
     /**
@@ -65,11 +67,13 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
+
     /**
-     * This method displays the given price on the screen.
+     * This method displays the given text with price on screen.
      */
-    private void displayPrice(int number) {
+    private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(message);
     }
+
 }

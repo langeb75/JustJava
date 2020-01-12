@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         int price = quantity * 5;
-        String priceMessage = "Total for " + quantity + " coffee(s): $" + price + "\nThank you!";
+        String priceMessage = "Total for " + quantity + " coffee(s): $" + price;
+        priceMessage = priceMessage + "\nThank You";
         displayMessage(priceMessage);
         //displayPrice(quantity * 5);
     }

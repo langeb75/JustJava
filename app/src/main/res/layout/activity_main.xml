@@ -108,4 +108,35 @@
         android:text="Order"
         android:textSize="20sp" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Hours_of_Operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Today 6am - 10 pm"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/Special_of_Day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Hours_of_Operation"
+            android:text="Special of the Day: Chocolate Mocchiato"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
 </LinearLayout>

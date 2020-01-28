@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void increment(View view) {
-        quantity = quantity + 1;
+        quantity++;  //shorthand for quantity = quantity + 1;
         displayQuantity(quantity);
     }
 
@@ -44,8 +44,14 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the - button is clicked.
      */
     public void decrement(View view) {
-        quantity = quantity - 1;
-        displayQuantity(quantity);
+        // this if else statement is used so that the quantity cannot be a negative number of coffees
+        if (quantity < 1) {
+            displayQuantity(0);
+            }
+        else {
+            quantity--;  //shorthand for quantity = quantity - 1;
+            displayQuantity(quantity);
+        }
     }
 
     /**
